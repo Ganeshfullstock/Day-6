@@ -1,0 +1,88 @@
+1) Class using in Movie:
+
+class Movie { 
+constructor(title= '', studio = '', rating = 'PG') { 
+this.title = title; 
+this.studio = studio; 
+this.rating = rating; 
+} 
+ 
+getPG(movies = [], rating = '') { 
+return movies.filter((m) => m.rating === rating); 
+} 
+} 
+const casionRoyaleMovie = new Movie('Casino Royale', 'Eon Productions', 'PG13'); 
+const leo = new Movie('Leo', 'LCU', 'PG'); 
+const vikram = new Movie('Vikram', 'Vijay', 'PG'); 
+const avatar = new Movie('Avatar: The water way', 'EROS', 'PG13'); 
+const avengers = new Movie('The avengers: End Game', 'LCU', 'PG'); 
+ 
+const moviesArray = [casionRoyaleMovie, leo, vikram, avatar, avengers]; 
+ 
+console.log(casionRoyaleMovie.getPG(moviesArray, 'R')); 
+console.log(casionRoyaleMovie.getPG(moviesArray, 'PG')); 
+
+
+
+2) Class using in Circle:
+
+class circle { 
+constructor (name= '', box = '', rating = 'PG') { 
+this.name = title; 
+this.box = studio; 
+this.rating = rating; 
+} 
+ getPG(circles = [], rating = '') { 
+return circles.filter((c) => c.rating === rating); 
+} 
+} 
+const casionRoyalecircle = new circle('Casino Royale', 'Eon Productions', 'PG13'); 
+const leo = new circle('Leo', 'LCU', 'PG'); 
+const vikram = new circle('Vikram', 'Vijay', 'PG'); 
+const avatar = new circle('Avatar: The water way', 'EROS', 'PG13'); 
+const avengers = new circle('The avengers: End Game', 'LCU', 'PG'); 
+const circlesArray = [casionRoyalecircle, leo, vikram, avatar, avengers]; 
+console.log(casionRoyalecircle.getPG(circlesArray, 'PG13')); 
+console.log(casionRoyalecircle.getPG(circlesArray, 'PG'));
+ 
+
+
+
+3) Person to class:
+
+class Person {
+  constructor(name, job) {
+    this.name = name;
+    this.job = job;
+  }
+ getName() {
+    return "Hello My Name is " + this.name ;
+  }
+static getPersonGender () {
+    return "male"
+  }
+}
+const developer = new Person("Lawrence Eagles", "developer"); 
+console.log("Developer's Name", developer.getName());  
+console.log("Developer's Prototype", developer.proto); 
+console.log("Person's gender", Person.getPersonGender());
+
+
+
+4) Uber Price:
+
+let baseFee = 50
+let cities = ["Providence", "Boston", "New York", ]
+let uberRates = [5, 10, 15]
+let customerName = "Wendy" 
+let customerCity = "Providence" 
+console.log("Hello", customerName+ ", welcome to the Uber Rate Program")
+function getRate(customerCity) {
+  function uberRate(customerCity, index) {
+    
+    let finalRate = (uberRates[index]) * baseFee
+    return finalRate
+  }
+  console.log(customerCity, "rate is:", uberRate(customerCity, cities.indexOf(customerCity)))
+}
+getRate(customerCity)
